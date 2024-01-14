@@ -1,0 +1,56 @@
+
+import React from 'react';
+import Image from 'next/image';
+import logo from '../../../public/assets/1.webp'
+import Link from 'next/link';
+import { PiShoppingCartBold } from "react-icons/pi";
+import Button from '../button/Button';
+import SearchBar from '../searchBar/SearchBar';
+const NavBar = () => {
+  return (
+    <div className="min-h-full ">
+      <nav className="bg-gray-800 ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <div>
+                  <div className="flex-shrink-0 ">
+                    {/* <Image className="h-12 w-12 " src={logo} alt="Today Fashion" /> */}
+                    <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >TOᗪᗩY ᖴᗩᔕᕼIOᑎ</Link>
+                  </div>
+              </div>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <Link href="/" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
+                  <Link href="/menProduct" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Men</Link>
+                  <Link href="/womenProducts" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Women</Link>
+                  <Link href="/kidsProduct" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kids</Link>
+                  <Link href="/contact" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Contact</Link>
+                </div>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-4 flex items-center md:ml-6">
+                <div className='mr-4  '>
+                  <button>
+                  <SearchBar/>
+                  </button>
+                </div>
+                <div className='mr-4 '>
+                <Link href="/login">  <Button title="login"/> </Link>
+                </div>
+                <div>
+                <button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  <PiShoppingCartBold className='w-10 h-10'/>
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default NavBar;
