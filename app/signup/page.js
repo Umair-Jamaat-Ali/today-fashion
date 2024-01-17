@@ -28,45 +28,49 @@ const SignUp = () => {
     };
 
     const submitHandler = async () => {
-
-        try {
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
-
-            var raw = JSON.stringify({
-                "firstName": firstName,
-                "lastName": lastName,
-                "email": email,
-                "phoneNumber": phoneNumber,
-                "password": password
-            });
-
-            console.log("Submitting htmlForm with data:", {
-                firstName,
-                lastName,
-                email,
-                phoneNumber,
-                password,
-                rewritePassword,
-            });
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-
-            const fetchData = await fetch("http://localhost:3000/api/user", requestOptions)
-            console.log("fetchData", fetchData);
-            alert("Account sucessfully created")
-
-            window.location.href = '/login';
-            
-        } catch (error) {
+        if (password !== rewritePassword) {
+            alert("Password does not matched")
+        } else {
+            try {
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+    
+                var raw = JSON.stringify({
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "email": email,
+                    "phoneNumber": phoneNumber,
+                    "password": password
+                });
+    
+                console.log("Submitting htmlForm with data:", {
+                    firstName,
+                    lastName,
+                    email,
+                    phoneNumber,
+                    password,
+                    rewritePassword,
+                });
+    
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+    
+                const fetchData = await fetch("http://localhost:3000/api/user", requestOptions)
+                console.log("fetchData", fetchData);
+                alert("Account sucessfully created")
+    
+                window.location.href = '/login';
+           
+        }
+             catch (error) {
             console.log("error", error);
         }
     }
+}
 
     return (
         <>
