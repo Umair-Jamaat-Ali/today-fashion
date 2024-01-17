@@ -1,8 +1,9 @@
 import NextAuth from "next-auth"
-import Credentials from "next-auth/providers/credentials"
+import CredentialsProvider from "next-auth/providers/credentials"
 
 
-const authOption = {providers: [
+const authOption = {
+    providers: [
     CredentialsProvider({
       name: 'Credentials',
       credentials: {
@@ -10,16 +11,15 @@ const authOption = {providers: [
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
-    
-        if (res.ok && user) {
+    const user = { email:"umairjamaat@gmail.com", fullName : "Umair Jamaat Ali", password:"11223344"}
+        if (user) {
           return user
         }
-        // Return null if user data could not be retrieved
         return null
       }
     })
   ]}
 
-const handler = NextAuth()
+const handler = NextAuth(authOption)
 
 export { handler as GET, handler as POST }
