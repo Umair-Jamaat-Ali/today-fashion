@@ -7,9 +7,12 @@ import img3 from '../public/assets/trending3.jpg'
 import img4 from '../public/assets/trending1.jpg'
 import BestCollections from './components/bestCollection/BestCollection'
 import ProductDetails from './components/productDetails/ProductDetails'
+import { getServerSession } from 'next-auth'
+import { redirect } from 'next/navigation'
 
 
-export default function Home() {
+
+export default async function Home() {
 
   const imageArray = [
     {src:img1, alt:"tshirt", width:"500px", height:"500px", productName:"Black Men T-Shirt", productPrice:"$20", productColor:"Black"},
@@ -17,6 +20,12 @@ export default function Home() {
     {src:img3, alt:"tshirt", width:"500px", height:"500px", productName:"Hand Bag", productPrice:"$57", productColor:"Wheat"},
     {src:img4, alt:"tshirt", width:"500px", height:"500px", productName:"Gift Box", productPrice:"$124", productColor:"Multiple"}
   ];
+  
+  const user = await getServerSession();
+  if (!user) {
+    redirect("/login")
+  }
+  console.log("user",user);
 
   return (
     <>

@@ -1,18 +1,27 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import NavBar from '../components/navBar/NavBar'
+import { signIn } from 'next-auth/react';
 
 export default function SignIn() {
+
+  const[email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
+
+  const onSubmitHandler = async (e) => {
+    e.preventDefault();
+    const user = await signIn("credentials",{
+      email: email,
+      password: password,
+      redirect:true,
+      callbackUrl:"/"
+    })
+    console.log("user",user);
+  }
+
     return (
       <>
       <NavBar/>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
 
         <div className="flex min-h-full flex-1 flex-col bg-slate-900 text-white justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -35,6 +44,7 @@ export default function SignIn() {
                     id="email"
                     name="email"
                     type="email"
+                    onChange={(e)=>setEmail(e.target.value)}
                     autoComplete="email"
                     placeholder="enter your email"
                     required
@@ -59,6 +69,7 @@ export default function SignIn() {
                     id="password"
                     name="password"
                     type="password"
+                    onChange={(e)=>setPassword(e.target.value)}
                     placeholder="enter your password"
                     autoComplete="current-password"
                     required
@@ -70,6 +81,7 @@ export default function SignIn() {
               <div>
                 <button
                   type="submit"
+                  onClick={onSubmitHandler}
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Sign in

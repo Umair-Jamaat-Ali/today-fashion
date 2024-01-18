@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { PiShoppingCartBold } from "react-icons/pi";
 import Button from '../button/Button';
 import SearchBar from '../searchBar/SearchBar';
+import LogOut from '../logout/LogOut';
 const NavBar = () => {
   return (
     <div className="min-h-full ">
@@ -38,6 +39,9 @@ const NavBar = () => {
                 </div>
                 <div className='mr-4 '>
                 <Link href="/login">  <Button title="login"/> </Link>
+                </div>
+                <div className='mr-4 '>
+                <LogOut/>
                 </div>
                 <div>
                 <button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">

@@ -18,7 +18,13 @@ const authOption = {
         return null
       }
     })
-  ]}
+  ],
+  secret: process.env.NEXTAUTH_SECRET,
+
+  page:{
+    singIn : "/login",
+  }
+}
 
 const handler = NextAuth(authOption)
 

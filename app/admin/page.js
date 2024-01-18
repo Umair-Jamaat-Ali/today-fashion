@@ -6,6 +6,7 @@ import {
   UserOutlined,
   FileOutlined,
 } from '@ant-design/icons';
+import { getSession } from 'next-auth';
 // import { patientModel } from '@/model/patientsData';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -29,6 +30,11 @@ const Admin = async () => {
   };
 
   const data = await fetchPatientsData();
+
+  const user = await getSession();
+
+  console.log("user", user);
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
