@@ -6,8 +6,10 @@ import img1 from '../../public/assets/men1.jpg'
 import img2 from '../../public/assets/men2.jpg'
 import img3 from '../../public/assets/men3.jpg'
 import img4 from '../../public/assets/shirt1.png'
+import { getServerSession } from 'next-auth'
+import { redirect } from 'next/navigation'
 
-export default function page() {
+export default async function page() {
 
 
     const imageArray = [
@@ -16,6 +18,13 @@ export default function page() {
         {src:img3, alt:"tshirt", width:"500px", height:"500px", productName:"Watches", productPrice:"$145", productColor:"Multiple"},
         {src:img4, alt:"tshirt", width:"500px", height:"500px", productName:"T-Shirt", productPrice:"$20", productColor:"Black"}
       ];
+
+
+      const user = await getServerSession();
+  if (!user) {
+    redirect("/login")
+  }
+  console.log("user",user);
 
     return (
         <>

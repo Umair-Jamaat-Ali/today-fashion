@@ -37,9 +37,9 @@ const NavBar = () => {
                   <SearchBar/>
                   </button>
                 </div>
-                <div className='mr-4 '>
+                {/* <div className='mr-4 '>
                 <Link href="/login">  <Button title="login"/> </Link>
-                </div>
+                </div> */}
                 <div className='mr-4 '>
                 <LogOut/>
                 </div>

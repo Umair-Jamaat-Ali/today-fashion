@@ -21,11 +21,11 @@ export default async function Home() {
     {src:img4, alt:"tshirt", width:"500px", height:"500px", productName:"Gift Box", productPrice:"$124", productColor:"Multiple"}
   ];
   
-  // const user = await getServerSession();
-  // if (!user) {
-  //   redirect("/login")
-  // }
-  // console.log("user",user);
+  const user = await getServerSession();
+  if (!user) {
+    redirect("/login")
+  }
+  console.log("user",user);
 
   return (
     <>
