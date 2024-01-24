@@ -17,16 +17,19 @@ const NavBar = () => {
               <div>
                   <div className="flex-shrink-0 ">
                     {/* <Image className="h-12 w-12 " src={logo} alt="Today Fashion" /> */}
-                    <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >TOᗪᗩY ᖴᗩᔕᕼIOᑎ</Link>
+                    <Link href="/"
+                     className="text-amber-700 hover:bg-gray-700
+                      hover:text-white rounded-md px-3 py-2
+                       text-lg font-semibold" >TOᗪᗩY ᖴᗩᔕᕼIOᑎ</Link>
                   </div>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link href="/" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
-                  <Link href="/menProduct" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Men</Link>
-                  <Link href="/womenProducts" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Women</Link>
-                  <Link href="/kidsProduct" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kids</Link>
-                  <Link href="/contact" className="hover:bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Contact</Link>
+                  <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
+                  <Link href="/menProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Men</Link>
+                  <Link href="/womenProducts" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Women</Link>
+                  <Link href="/kidsProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kids</Link>
+                  <Link href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Contact</Link>
                 </div>
               </div>
             </div>

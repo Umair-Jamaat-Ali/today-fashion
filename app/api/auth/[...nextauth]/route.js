@@ -12,15 +12,16 @@ const authOption = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
-    const user = { email:"umairjamaat@gmail.com", fullName : "Umair Jamaat Ali", password:"11223344"}
+    // const user = { email:"umairjamaat@gmail.com", fullName : "Umair Jamaat Ali", password:"11223344"}
    
     try {
       console.log("credentials", credentials);
       // await prisma.user.create({
       //   data:{
-      //     email: credentials.username,
-      //     name: "gohar",
-      //     password: credentials.password,
+      //     email: "mali@gmail.com",
+      //     firstName: "Muhammad",
+      //     password: "12345678",
+      //     lastName: "Ali"
       //   }
       // })
      const user = await prisma.user.findFirst({
@@ -34,9 +35,9 @@ const authOption = {
       
       console.log("user", user);
       
-    if (user) {
-          return user
-        }
+      if (user) {
+        return { id: user.id, email: user.email, name: user.fullName };
+      }
         return null
       } 
       
@@ -50,7 +51,7 @@ const authOption = {
   secret: process.env.NEXTAUTH_SECRET,
 
   page:{
-    singIn : "/login",
+    signIn : "/login",
   }
 }
 

@@ -9,6 +9,8 @@ import BestCollections from './components/bestCollection/BestCollection'
 import ProductDetails from './components/productDetails/ProductDetails'
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
+import Footer from './components/footer/Footer'
+
 
 
 
@@ -37,6 +39,7 @@ In the world of trends be a timeless icon fashion is not just what you wear but 
       <TrendingProducts title="Trending This Week" imageArray={imageArray}/>
       <BestCollections/>
       {/* <ProductDetails/> */}
+      <Footer/>
     </div>
     </>
   )
