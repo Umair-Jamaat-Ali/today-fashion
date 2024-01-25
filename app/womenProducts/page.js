@@ -8,6 +8,7 @@ import img3 from '../../public/assets/women3.jpg'
 import img4 from '../../public/assets/women4.jpg'
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
+import Footer from '../components/footer/Footer'
 
 export default async function page() {
 
@@ -30,6 +31,7 @@ export default async function page() {
         para="Elevate your style with timeless classics and modern twists, because a well-dressed man is his own masterpiece."
       />
       <TrendingProducts title="Trending Women Products This Week" imageArray={imageArray} />
+      <Footer/>
     </>
   )
 }

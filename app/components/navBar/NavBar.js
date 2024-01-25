@@ -1,13 +1,15 @@
-
 import React from 'react';
-import Image from 'next/image';
-import logo from '../../../public/assets/1.webp'
 import Link from 'next/link';
-import { PiShoppingCartBold } from "react-icons/pi";
-import Button from '../button/Button';
 import SearchBar from '../searchBar/SearchBar';
 import LogOut from '../logout/LogOut';
+import { CartModel } from '../cartModel/CartModel';
+
 const NavBar = () => {
+
+  // const cartHandler = () => {
+  //   CardModel();
+  // }
+
   return (
     <div className="min-h-full ">
       <nav className="bg-gray-800 ">
@@ -46,10 +48,13 @@ const NavBar = () => {
                 <div className='mr-4 '>
                 <LogOut/>
                 </div>
-                <div>
-                <button type="button" className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <PiShoppingCartBold className='w-10 h-10'/>
-                </button>
+                
+                  
+                <div
+                className="relative rounded-full bg-gray-800 p-1 
+                text-gray-400 hover:text-white focus:outline-none focus:ring-2 
+                focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  <CartModel/>
                 </div>
               </div>
             </div>
