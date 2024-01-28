@@ -32,9 +32,8 @@ export default async function Home() {
   return (
     <>
     <div>
-      <Header title="TOᗪᗩY ᖴᗩᔕᕼIOᑎ" image={bgImg}
-      para="Fashion is the art of expressing your individuality without saying a word wear your story with pride.
-In the world of trends be a timeless icon fashion is not just what you wear but how you wear it."
+      <Header  image={bgImg}
+      
       />
       <TrendingProducts title="Trending This Week" imageArray={imageArray}/>
       <BestCollections/>

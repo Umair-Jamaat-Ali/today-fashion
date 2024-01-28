@@ -83,17 +83,20 @@ import ImageSlider from '../imageSlider/ImageSlider';
 
 const Header = ({ title, para, image }) => {
   const slideImages = [
-    { src: img1, alt: 'tshirt', width: '500px', height: '500px', productName: 'Black Men T-Shirt', productPrice: '$20', productColor: 'Black' },
-    { src: img2, alt: 'tshirt', width: '500px', height: '500px', productName: 'Black Men T-Shirt', productPrice: '$20', productColor: 'Black' },
-    { src: img3, alt: 'tshirt', width: '500px', height: '500px', productName: 'Black Men T-Shirt', productPrice: '$20', productColor: 'Black' },
+    { src: img1, alt: 'tshirt', width: '500px', height: '500px', title:"TOᗪᗩY ᖴᗩᔕᕼIOᑎ", 
+    para: "Fashion is the art of expressing your individuality without saying a word wear your story with pride.In the world of trends be a timeless icon fashion is not just what you wear but how you wear it." },
+    { src: img2, alt: 'tshirt', width: '500px', height: '500px', title:"TOᗪᗩY ᖴᗩᔕᕼIOᑎ", 
+    para: "Fashion is the art of expressing your individuality without saying a word wear your story with pride.In the world of trends be a timeless icon fashion is not just what you wear but how you wear it." },
+    { src: img3, alt: 'tshirt', width: '500px', height: '500px', title:"TOᗪᗩY ᖴᗩᔕᕼIOᑎ", 
+    para: "Fashion is the art of expressing your individuality without saying a word wear your story with pride.In the world of trends be a timeless icon fashion is not just what you wear but how you wear it." },
   ];
 
   return (
     <>
       <NavBar />
       <div className="relative isolate overflow-hidden bg-gray-900">
-      {/* <h2 className="text-4xl font-bold tracking-tight text-white pl-4 sm:text-6xl">{title}</h2>
-            <p className="mt-6 text-lg leading-8 text-white">{para}</p> */}
+      <h2 className="text-4xl font-bold tracking-tight text-white pl-4 sm:text-6xl">{title}</h2>
+            <p className="mt-6 text-lg leading-8 text-white">{para}</p>
         <ImageSlider slideImages={slideImages}
         className="absolute bg-cover inset-0 opacity-50 -z-10 h-full w-full object-cover object-right md:object-center"
         />
