@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick'; 
-import 'slick-carousel/slick/slick.css'; 
-import 'slick-carousel/slick/slick-theme.css'; 
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Button from '../button/Button';
 
 const ImageSlider = ({ slideImages }) => {
@@ -14,7 +14,7 @@ const ImageSlider = ({ slideImages }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 5000,
     dots: true,
     autoplaySpeed: 3000,
     cssEase: 'linear',
@@ -40,27 +40,23 @@ const ImageSlider = ({ slideImages }) => {
 
   return (
     <div className="slider-container">
-      <Slider {...settings}> 
+      <Slider {...settings}>
         {slideImages.map((image, index) => (
           <div key={index} className="relative">
-            <Image src={image.src} 
-            className="object-cover w-full h-full opacity-50"
-            alt={image.alt} width={image.width} height={image.height} />
-           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start px-10 text-white">
-            <h2 className="text-4xl font-bold tracking-tight">{image.title}</h2>
-            <p className="mt-2 text-lg leading-8">{image.para}</p>
-            <Button title="SHOP NOW" />
-          </div>
+            <Image src={image.src}
+              className="object-fill  opacity-50"
+              alt={image.alt} width={image.width} height={image.height} />
+            
           </div>
         ))}
       </Slider>
 
-      <button className="prev" onClick={prevSlide}>
+      {/* <button className="prev" onClick={prevSlide}>
         &#10094;
       </button>
       <button className="next" onClick={nextSlide}>
         &#10095;
-      </button>
+      </button> */}
     </div>
   );
 };
