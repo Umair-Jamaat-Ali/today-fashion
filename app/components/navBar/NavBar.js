@@ -1,14 +1,12 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import SearchBar from '../searchBar/SearchBar';
 import LogOut from '../logout/LogOut';
 import { CartModel } from '../cartModel/CartModel';
+import { BsArrowUpSquareFill } from "react-icons/bs";
 
 const NavBar = () => {
-
-  // const cartHandler = () => {
-  //   CardModel();
-  // }
 
   return (
     <div className="min-h-full ">
@@ -17,13 +15,12 @@ const NavBar = () => {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <div>
-                  <div className="flex-shrink-0 ">
-                    {/* <Image className="h-12 w-12 " src={logo} alt="Today Fashion" /> */}
-                    <Link href="/"
-                     className="text-amber-700 hover:bg-gray-700
+                <div className="flex-shrink-0 ">
+                  <Link href="/"
+                    className="text-amber-700 hover:bg-gray-700
                       hover:text-white rounded-md px-3 py-2
                        text-lg font-semibold" >TOᗪᗩY ᖴᗩᔕᕼIOᑎ</Link>
-                  </div>
+                </div>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -39,26 +36,33 @@ const NavBar = () => {
               <div className="ml-4 flex items-center md:ml-6">
                 <div className='mr-4  '>
                   <button>
-                  <SearchBar/>
+                    <SearchBar />
                   </button>
                 </div>
                 {/* <div className='mr-4 '>
                 <Link href="/login">  <Button title="login"/> </Link>
                 </div> */}
                 <div className='mr-4 '>
-                <LogOut/>
+                  <LogOut />
                 </div>
-                
-                  
+
+
                 <div
-                className="relative rounded-full bg-gray-800 p-1 
+                  className="relative rounded-full bg-gray-800 p-1 
                 text-gray-400 hover:text-white focus:outline-none focus:ring-2 
                 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <CartModel/>
+                  <CartModel />
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className='border border-x-pink-950 w-4 h-4 fixed bottom-10 right-8 cursor-pointer'>
+
+          <Link href="#" className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <BsArrowUpSquareFill />
+            <div>Go top</div>
+          </Link>
         </div>
       </nav>
     </div>
