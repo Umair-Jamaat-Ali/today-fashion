@@ -5,6 +5,7 @@ import img3 from '../../../public/assets/gm.png';
 import img4 from '../../../public/assets/is.png';
 import img5 from '../../../public/assets/ln.webp';
 import img6 from '../../../public/assets/tw.png';
+import GoTop from '../goTop/GoTop';
 
 
 export default function Footer() {
@@ -74,24 +75,6 @@ export default function Footer() {
                             alt="Picture of the author"
                         />
                     </div>
-                    {/* <div className='px-2 rounded-full'>
-                        <Image
-                            src={img5}
-                            className='rounded-full cursor-pointer'
-                            width={50}
-                            height={50}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                    <div className='px-2 rounded-full'>
-                        <Image
-                            src={img6}
-                            className='rounded-full cursor-pointer'
-                            width={50}
-                            height={50}
-                            alt="Picture of the author"
-                        />
-                    </div> */}
                 </div>
                 <div className='py-5 text-center text-green-800'>
                     <p>&#169; Copyright. All rights reserved.This design created 

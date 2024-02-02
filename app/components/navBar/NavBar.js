@@ -4,7 +4,8 @@ import Link from 'next/link';
 import SearchBar from '../searchBar/SearchBar';
 import LogOut from '../logout/LogOut';
 import { CartModel } from '../cartModel/CartModel';
-import { BsArrowUpSquareFill } from "react-icons/bs";
+import GoTop from '../goTop/GoTop';
+
 
 const NavBar = () => {
 
@@ -57,12 +58,8 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <div className='border border-x-pink-950 w-4 h-4 fixed bottom-10 right-8 cursor-pointer'>
-
-          <Link href="#" className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <BsArrowUpSquareFill />
-            <div>Go top</div>
-          </Link>
+        <div className='fixed w-10 h-10 bottom-10 right-12'>
+          <GoTop/>
         </div>
       </nav>
     </div>
