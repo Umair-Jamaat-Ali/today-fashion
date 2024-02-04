@@ -6,6 +6,7 @@ import img4 from '../../../public/assets/is.png';
 import img5 from '../../../public/assets/ln.webp';
 import img6 from '../../../public/assets/tw.png';
 import GoTop from '../goTop/GoTop';
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -18,23 +19,37 @@ export default function Footer() {
                         <div>Don't change to fit the fashion, change the fashion to fit you.</div>
                     </div>
                     <div className='grid-flow-col w-25'>
-                        <div className='py-2 pl-4'>Our Services</div>
-                        <div className='py-2 pl-4'>WEEBLY THEMES</div>
-                        <div className='py-2 pl-4'>PRE SALE FAQS</div>
-                        <div className='py-2 pl-4'>SUBMIT A TICKETS</div>
+                        <div className='py-6 text-lg font-semibold pl-4'>Shop Men</div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Clothing Fashion</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Winter</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Summer</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Formal</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Casual</Link></div>
                     </div>
                     <div className='grid-flow-col w-25'>
-                        <div className='py-2 pl-4'>SHOWCASE</div>
-                        <div className='py-2 pl-4'>SERVICES</div>
-                        <div className='py-2 pl-4'>THEMES TWAEK</div>
-                        <div className='py-2 pl-4'>WIDGETKIT</div>
-                        <div className='py-2 pl-4'>SUPPORT</div>
+                        <div className='py-6 text-lg font-semibold pl-4'>Shop Women</div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Clothing Fashion</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Winter</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Summer</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Formal</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Casual</Link></div>
                     </div>
                     <div className='grid-flow-col w-25'>
-                        <div className='py-2 pl-4'>ABOUT US</div>
-                        <div className='py-2 pl-4'>CONTACT US</div>
-                        <div className='py-2 pl-4'>AFFILATES</div>
-                        <div className='py-2 pl-4'>RESOURCES</div>
+                        <div className='py-6 text-lg font-semibold pl-4'>Baby Collection</div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Clothing Fashion</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Winter</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Summer</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Formal</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Casual</Link></div>
+                    </div>
+                    <div className='grid-flow-col w-25'>
+                        <div className='py-6 text-lg font-semibold pl-4'>Quick Links</div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Track Your Order</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Support</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>FAQ</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>About</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Carrier</Link></div>
+                        <div className='py-2 pl-4 hover:bg-amber-700'><Link href='/'>Contact Us</Link></div>
                     </div>
                 </div>
                 <hr className='text-white mx-10' />

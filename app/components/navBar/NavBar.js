@@ -7,6 +7,7 @@ import { CartModel } from '../cartModel/CartModel';
 import GoTop from '../goTop/GoTop';
 
 
+
 const NavBar = () => {
 
   return (
@@ -30,6 +31,7 @@ const NavBar = () => {
                   <Link href="/womenProducts" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Women</Link>
                   <Link href="/kidsProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kids</Link>
                   <Link href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Contact</Link>
+                
                 </div>
               </div>
             </div>
