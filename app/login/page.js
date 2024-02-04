@@ -1,23 +1,36 @@
 'use client'
 import React, { useState } from 'react'
-import NavBar from '../components/navBar/NavBar'
 import { signIn } from 'next-auth/react';
+import animation from '../animation/loudinganima.json';
+import Lottie from 'lottie-react';
+
 
 export default function SignIn() {
 
   const[email, setEmail] = useState("");
   const [password, setPassword] = useState("")
+  const [loading, setLoading] = useState(false)
+
+ 
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    const user = await signIn("credentials",{
-      email: email,
-      password: password,
-      redirect:true,
-      callbackUrl:"/"
-    })
-    console.log("user",user);
-  }
+    setLoading(true)
+
+    try {
+      const user = await signIn("credentials", {
+        email: email,
+        password: password,
+        redirect: true,
+        callbackUrl: "/"
+      });
+
+      console.log("user", user);
+    } finally {
+      setLoading(false);
+    }
+    
+  };
 
     return (
       <>
@@ -84,8 +97,9 @@ export default function SignIn() {
                   onClick={onSubmitHandler}
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign in
-                </button>
+                 {loading &&  <Lottie animationData={animation} /> }
+                 {!loading &&  'Sign in'}
+                </button> 
               </div>
             </form>
   
