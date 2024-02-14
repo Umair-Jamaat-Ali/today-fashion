@@ -5,10 +5,13 @@ import SearchBar from '../searchBar/SearchBar';
 import LogOut from '../logout/LogOut';
 import { CartModel } from '../cartModel/CartModel';
 import GoTop from '../goTop/GoTop';
+import { useState } from 'react';
 
 
 
 const NavBar = () => {
+
+  const [menu, setMenu] = useState("")
 
   return (
     <div className="min-h-full ">
@@ -26,11 +29,21 @@ const NavBar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
-                  <Link href="/menProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Men</Link>
-                  <Link href="/womenProducts" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Women</Link>
-                  <Link href="/kidsProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kids</Link>
-                  <Link href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Contact</Link>
+                  <Link onClick={()=>{setMenu("home")}}
+                  href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">
+                    Home {menu === "home" ? <hr className='barline'/> : <></>}</Link>
+                  <Link  onClick={()=>{setMenu("men")}} 
+                  href="/menProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    Men {menu === "men" ? <hr className='barline'/> : <></>}</Link>
+                  <Link  onClick={()=>{setMenu("women")}}
+                   href="/womenProducts" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    Women {menu === "women" ? <hr className='barline'/> : <></>}</Link>
+                  <Link  onClick={()=>{setMenu("kids")}}
+                  href="/kidsProduct" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    Kids {menu === "kids" ? <hr className='barline'/> : <></>}</Link>
+                  <Link  onClick={()=>{setMenu("contact")}}
+                  href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >
+                    Contact {menu === "contact" ? <hr className='barline'/> : <></>}</Link>
                 
                 </div>
               </div>
