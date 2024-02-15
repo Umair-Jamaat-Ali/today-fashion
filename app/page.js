@@ -5,11 +5,16 @@ import BestCollections from './components/bestCollection/BestCollection'
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 import Footer from './components/footer/Footer'
+import Comments from './components/comment/Comments'
 
 
 
 
 export default async function Home() {
+
+  const userComments = [
+    {comment:""}
+  ]
   
   const user = await getServerSession();
   if (!user) {
@@ -25,6 +30,7 @@ export default async function Home() {
       />
       <TrendingProducts title="Trending This Week" />
       <BestCollections/>
+      <Comments/>
       <Footer/>
     </div>
     </>
