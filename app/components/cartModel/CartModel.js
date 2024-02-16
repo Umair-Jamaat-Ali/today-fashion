@@ -33,6 +33,7 @@ export function CartModel() {
     return (
         <div>
             <button onClick={openModal}>
+            {/* <span className='cart-items'>0</span> */}
                 <PiShoppingCartBold className='w-10 h-10' />
             </button>
             <Modal

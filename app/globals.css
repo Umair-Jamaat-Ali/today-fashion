@@ -87,11 +87,9 @@ li {
   display: block;
   color: #333;
 } */
-
-/* Adding underline to the active page and changing its color */
 li.active Link {
-  border-bottom: 2px solid #007bff; /* Change this color to the desired active color */
-  color: #007bff; /* Change this color to the desired active color */
+  border-bottom: 2px solid #007bff;
+  color: #007bff; 
 } 
 
 .barline{
@@ -105,3 +103,10 @@ li.active Link {
 link{
   text-decoration-line: none;
 }
+
+/* .cart-items{
+  position: relative;
+  top: 40%;
+  right: 8px;
+
+} */

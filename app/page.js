@@ -13,7 +13,10 @@ import Comments from './components/comment/Comments'
 export default async function Home() {
 
   const userComments = [
-    {comment:""}
+    {comment:"this web sites its so good", name:"mehran"},
+    {comment:"this web sites its so good", name:"ali"},
+    {comment:"this web sites its so good", name:"umair"},
+    {comment:"this web sites its so good", name:"saqib"},
   ]
   
   const user = await getServerSession();
@@ -29,8 +32,8 @@ export default async function Home() {
       para="Fashion is the art of expressing your individuality without saying a word wear your story with pride.In the world of trends be a timeless icon fashion is not just what you wear but how you wear it." image={bgImg}
       />
       <TrendingProducts title="Trending This Week" />
-      <BestCollections/>
-      <Comments/>
+      <BestCollections />
+      <Comments userComments={userComments}/>
       <Footer/>
     </div>
     </>
