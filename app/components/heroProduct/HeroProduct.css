@@ -18,7 +18,7 @@
 }
 
 .Hero-container-left h1{
-    margin:  0px 50px 10px 50px;
+    margin:  0px 50px 50px 150px;
     padding: 0px 50px 10px 50px;
     font-size: xx-large;
     font-weight: bolder;
@@ -28,12 +28,12 @@
 }
 
 .Hero-container-left p {
-    margin:  0px 50px 10px 50px;
+    margin:  0px 50px 50px 50px;
     padding: 0px 50px 10px 50px;
 }
 
 .Hero-container-left button{
-    margin:  0px 50px 10px 50px;
+    margin:  0px 50px 10px 200px;
     padding: 0px 50px 10px 50px;
 }
 
