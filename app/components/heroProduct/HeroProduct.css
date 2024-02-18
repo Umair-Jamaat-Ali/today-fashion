@@ -5,14 +5,39 @@
 
 .Hero-container{
     width: 75%;
-    height: auto;
+    height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Hero-container-left{
-    margin-top: 15px;
-    padding-top: 20px;
+    margin: 15px;
+    padding-left: 20px;
     
+}
+
+.Hero-container-left h1{
+    margin:  0px 50px 10px 50px;
+    padding: 0px 50px 10px 50px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+
+}
+
+.Hero-container-left p {
+    margin:  0px 50px 10px 50px;
+    padding: 0px 50px 10px 50px;
+}
+
+.Hero-container-left button{
+    margin:  0px 50px 10px 50px;
+    padding: 0px 50px 10px 50px;
+}
+
+.Hero-container-right {
+    margin:  10px 0px 10px 20px;
+
 }
