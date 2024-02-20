@@ -16,7 +16,7 @@ export default function Footer() {
                 <div className='p-5 flex justify-between text-gray-200'>
                     <div className='grid-flow-col w-25'>
                         <div className='text-3xl font-bold py-4 text-amber-700'>TOᗪᗩY ᖴᗩᔕᕼIOᑎ</div>
-                        <div>Don't change to fit the fashion, change the fashion to fit you.</div>
+                        <div>Don&apos;t change to fit the fashion, change the fashion to fit you.</div>
                     </div>
                     <div className='grid-flow-col w-25'>
                         <div className='py-6 text-lg font-semibold pl-4'>Shop Men</div>
