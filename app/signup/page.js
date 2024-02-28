@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import NavBar from '../components/navBar/NavBar';
+import Link from 'next/link';
 import { BiHide } from "react-icons/bi";
 import { BiShow } from "react-icons/bi";
 
@@ -12,7 +12,6 @@ const SignUp = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [rewritePassword, SetRewritePassword] = useState('');
-    const [passwordsMatch, setPasswordsMatch] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
 
 
@@ -142,9 +141,9 @@ const SignUp = () => {
                 </form>
                 <p className="mb-10 text-center text-sm text-gray-500">
               Already a member?{' '}
-              <a href="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <Link href="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                 SignIn
-              </a>
+              </Link>
             </p>
             </div>
         </>
